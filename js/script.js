@@ -86,17 +86,16 @@ function crearTarjetas(productos){
   sectionTarjetas.innerHTML = "";
 
   productos.forEach(element => {
-    const tarjeta = document.createElement('producto');
-    tarjeta.classList.add('article');
+    const tarjeta = document.createElement('article');
+    tarjeta.classList.add('producto');
 
     tarjeta.innerHTML = `
       <img>${element.img}</img>
       <h3>${element.h3}</h3>
       <h6>${element.h6}</h6>
       <p>${element.p}</p>
-      <button>${element.button}</button>
+      <button>${element.boton}</button>
     `
-
     sectionTarjetas.appendChild(tarjeta)
   });
 }

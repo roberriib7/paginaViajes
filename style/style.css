@@ -94,4 +94,15 @@ h1{
     cursor: pointer;
 }
 
+.producto{
+    width: 20rem;
+    height: 25rem;
+    border: solid var(--color-primario) 3px;
+    border-radius: 8px;
+}
 
+.tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
