@@ -1,5 +1,4 @@
-
-:root{
+:root {
     --color-primario: #026e14;
     --blanco: #ffff;
     --negro: #0000;
@@ -7,13 +6,13 @@
     --color-fondo: #fafafaee;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: var(--color-fondo);
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     padding: 2rem 2rem;
@@ -21,69 +20,84 @@ header{
 }
 
 .titillium-web-regular {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.iconos{
+.iconos {
     display: none;
 }
 
 
-.iconos .material-symbols-outlined{
-  font-size: 40px;
-  color: var(--color-primario);
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+.iconos .material-symbols-outlined {
+    font-size: 40px;
+    color: var(--color-primario);
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
-header img{
+ul .material-symbols-outlined {
+    font-size: 40px;
+    color: var(--color-primario);
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+header img {
     width: 10rem;
     height: auto;
 }
 
-header div{
+header div {
     display: flex;
     gap: 3rem;
 }
 
-ul{
+ul {
     display: flex;
     list-style: none;
     gap: 4rem;
     padding-right: 3rem;
 }
 
-li{
+li {
     font-family: var(--fuente);
     font-size: 1.4rem;
 }
 
-nav a{
+nav a {
     color: var(--color-primario);
     text-decoration: none;
 }
 
-h1{
+h1 {
     text-align: center;
     font-family: var(--fuente);
     color: var(--color-primario);
 }
 
-.botones{
+.botones {
     display: flex;
     gap: 1.5rem;
 }
 
-.divOrdenes{
+.divOrdenes {
     display: none;
 }
 
-.botonEuropa, .botonAfrica, .botonAsia, .botonAmerica{
+.botonEuropa,
+.botonAfrica,
+.botonAsia,
+.botonAmericaDelNorte,
+.botonAmericaDelSur,
+.botonOceania {
     width: 5rem;
     height: 1.7rem;
     background-color: var(--color-primario);
@@ -94,15 +108,126 @@ h1{
     cursor: pointer;
 }
 
-.producto{
+.producto {
     width: 20rem;
-    height: 25rem;
+    height: 32rem;
     border: solid var(--color-primario) 3px;
     border-radius: 8px;
 }
 
-.tarjetas{
+.tarjetas {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.botones {
+    padding: 1rem 4.5rem;
+}
+
+.divOrdenesabierto {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 895px;
+    top: 265px;
+}
+
+.elementosOrden {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.elementosOrden input,
+button {
+    height: 1.5rem;
+
+}
+
+.buscador {
+    width: 14rem;
+}
+
+.producto img {
+    height: 15rem;
+    width: auto;
+}
+
+.producto h3 {
+    font-family: var(--fuente);
+    color: var(--color-primario);
+    font-size: 1.9rem;
+    text-align: center;
+    margin: 0 0;
+}
+
+.producto h6 {
+    font-family: var(--fuente);
+    color: var(--color-primario);
+    font-size: 1rem;
+    padding: 0rem 1.5rem;
+    margin: 0 0;
+
+}
+
+.producto p {
+    font-family: var(--fuente);
+    padding: 0rem 1rem;
+}
+
+.producto button {
+    background-color: var(--color-primario);
+    color: var(--blanco);
+    width: 10rem;
+    height: 2rem;
+    border: 3px solid var(--color-primario);
+    border-radius: 8px;
+
+}
+
+.producto div {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+@media(max-width:700px) {
+
+    .iconos {
+        display: flex;
+    }
+
+    .iconos .material-symbols-outlined {
+        font-size: 40px;
+        color: var(--color-primario);
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+    }
+
+   nav ul.abierto{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: solid var(--color-primario) 3px;
+    gap: 1rem;
+    width: 3rem;
+    right: 15px;
+    top: 50px;
+    z-index: 1000;
+    background-color: var(--color-fondo);
+   }
+
+   nav ul{
+    display: none;
+   }
+
+   ul .material-symbols-outlined{
+    display: none;
+   }
 }
